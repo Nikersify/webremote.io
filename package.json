@@ -1,0 +1,8 @@
+{
+  "name": "webremote.io",
+  "version": "0.0.1",
+  "description": "a portable remote control thing for windows",
+  "dependencies": {
+    "socket.io": "^1.3.5"
+  }
+}
