@@ -9,14 +9,12 @@ Remote = {
 	Events: new require('events').EventEmitter
 };
 
-Remote.vars.rootDir = __dirname;
+Remote.vars.rootDir = process.cwd();
 
 global.Remote = Remote;
 
-// fileserver to serve static files to client
-var fileserver = require('./lib/fileserver');
-
-Remote.Fluff.fileserver = fileserver;
+// fileserver to serve static files to a client
+Remote.Fluff.fileserver = require('./lib/fileserver');
 
 Remote.Fluff.io = require('./lib/io');
 

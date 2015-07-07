@@ -12,8 +12,8 @@ var server = http.createServer(function (req, res){
 		err? res.end() : res.end(data);
 	});
 });
-console.log('hehe')
-module.exports = server;
+
+module.exports = exports = server;
 
 module.exports.start = function(_port, _uri){
 	var port = (typeof _port === 'undefined') ? 80 : _port,

@@ -1,37 +1,18 @@
 <html>
 <head>
 	<title>webremote.io</title>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="gui/css/remote.css">
+	<script type="text/javascript" src="./ext/jquery/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/remote.css">
 </head>
 <body>
 <header>
 	<h3>hello</h3>
 </header>
+
+<script type="text/javascript" src='app.js'></script>
+
 <!-- context menu -->
-<script type="text/javascript">
-$(document).ready(function(){
-	var gui = require('nw.gui');
-	var contextMenu = new gui.Menu();
-
-	console.log(gui.Shell);
-	console.log(gui);
-
-	contextMenu.append(new gui.MenuItem({
-		label: 'Open Developer Tools',
-		click: function(){
-			gui.Window.get().showDevTools();
-		}
-	}));
-
-	$('body').on('mousedown', function(e){
-		if(e.button == 2){
-			contextMenu.popup(e.offsetX, e.offsetY);
-		}
-	});
-});
-</script>
-
+<script type="text/javascript" src='contextmenu.js'></script>
 <!-- bootstrapper or something -->
 <script type="text/javascript">
 $(document).ready(function(){
@@ -42,7 +23,7 @@ $(document).ready(function(){
 		debug: false
 	};
 
-	var fn = jade.compileFile('gui/jade/content.jade', opts);
+	var fn = jade.compileFile('src/jade/content.jade', opts);
 	
 	vars = {};
 	var compiled = fn(vars);
