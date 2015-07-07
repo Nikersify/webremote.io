@@ -2,20 +2,17 @@
 
 // require require raewafgxvb
 
-Remote = {
-	vars: {},
-	Settings: {},
-	Fluff: {},
-	Events: new require('events').EventEmitter
-};
+var Remote = require('./lib/remote');
 
 Remote.vars.rootDir = process.cwd();
 
-global.Remote = Remote;
-
-// fileserver to serve static files to a client
-Remote.Fluff.fileserver = require('./lib/fileserver');
+// server to serve static files to a client
+Remote.Fluff.server = require('./lib/server');
 
 Remote.Fluff.io = require('./lib/io');
 
-fileserver.start(80, '0.0.0.0');
+
+
+Remote.Events.on('start_server', function(){
+	Remote.Fluff.server.start(Remote.Fluff.server.port, Remote.Fluff.server.uri);
+});

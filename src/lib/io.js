@@ -1,4 +1,6 @@
-var io = require('socket.io')(Remote.Fluff.fileserver);
+var Remote = require('./remote');
+
+var io = require('socket.io')(Remote.Fluff.server);
 
 io.on('connection', function(socket) {
 	socket.on('message', function(data){
