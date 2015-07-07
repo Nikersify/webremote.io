@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>webremote.io</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="gui/css/remote.css">
+</head>
+<body>
+
+<!-- context menu -->
+<script type="text/javascript">
+$(document).ready(function(){
+	var gui = require('nw.gui');
+	var contextMenu = new gui.Menu();
+
+	contextMenu.append(new gui.MenuItem({
+		label: 'Open Developer Tools',
+		click: function(){
+			gui.Window.get().showDevTools();
+		}
+	}));
+
+	$('#content').on('mousedown', function(e){
+		if(e.button == 2){
+			contextMenu.popup(e.offsetX, e.offsetY);
+		}
+	});
+});
+</script>
+
+<!-- bootstrapper or something -->
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	var jade = require('jade');
+
+	opts = {
+		debug: false
+	};
+
+	var fn = jade.compileFile('gui/jade/content.jade', opts);
+	
+	vars = {};
+	var compiled = fn(vars);
+	$('#content').html(compiled);
+});
+</script>
+<div id='content'></div>
+</body>
+</html>

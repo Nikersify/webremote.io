@@ -1,0 +1,14 @@
+/* maximum crisp */
+* {
+	-webkit-user-select: none;
+	cursor: default;
+}
+
+body {
+	margin: 0;
+}
+
+#content {
+	height: 100%;
+	width: 100%;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "webremote.io",
+  "dependencies": {
+    "jquery": "components/jquery#~2.1.4"
+  }
+}
