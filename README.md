@@ -2,52 +2,52 @@
 
 # webremote.io
 
-## dependencies
+### dependencies
 
-### node.js
+#### node.js
 
 get it [here](https://nodejs.org/)
 
-### bower
+#### bower
 
 ```sh
-$ npm install -g bower
+$ npm install -g bower bower-installer
 ```
 
-### gulp
+#### gulp
 ```sh
 $ npm install -g gulp
 ```
 
-## running
+### running
 
-### clone the repo
+#### clone the repo
 
 ```sh
 $ git clone https://github.com/Nikersify/webremote.io.git
 $ cd webremote.io/
 ```
 
-### get node stuff
+#### get node stuff
 *yes, it takes a long time*
 
 ```sh
 $ npm install
 ```
 
-### bower stuff
+#### bower stuff
 
 ```sh
-$ bower install
+$ bower-installer
 ```
 
-### pleaseworkpleasework
+#### pleaseworkpleasework
 
 ```sh
 $ npm start
 ```
 
-## building
+### building
 
 wip lel
 

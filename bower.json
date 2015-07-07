@@ -1,6 +1,10 @@
 {
-  "name": "webremote.io",
-  "dependencies": {
-    "jquery": "components/jquery#~2.1.4"
-  }
+	"name": "webremote.io",
+	"dependencies": {
+		"jquery": "latest",
+		"font-awesome": "latest"
+	},
+	"install": {
+		"path": "ext/"
+	}
 }

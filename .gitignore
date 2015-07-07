@@ -28,3 +28,8 @@ node_modules
 
 # Bower stuff
 bower_components/
+ext/
+
+# node webkit build tools
+build/
+cache/

@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "bower": "^1.4.1",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "node-webkit-builder": "^1.0.12",
+    "rimraf": "^2.4.1"
   }
 }
