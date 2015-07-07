@@ -1,23 +1,18 @@
 var gulp = require('gulp'),
-	path = require('path'),
 	fs = require('fs'),
-	rimraf = require('rimraf');
+	rimraf = require('rimraf'),
+	minimist = require('minimist');
 
 gulp.task('build', function(){
 	var NwBuilder = require('node-webkit-builder');
 	var nw = new NwBuilder({
-		files: ['**', '!node_modules/**', '!bower_components/**', '!cache/**'],
+		files: ['**', '!bower_components/**', '!cache/**'],
 		platforms: ['win64']
 	});
 
 	var dir = fs.readdirSync('.');
-	for (var i = dir.length - 1; i >= 0; i--) {
-		if(dir[i] == 'cache'){
-			rimraf.sync('cache/');
-		}
-	};
 
-	// i know but im scared
+	// remove old builds
 	for (var i = dir.length - 1; i >= 0; i--) {
 		if(dir[i] == 'build'){
 			rimraf.sync('build/');
@@ -33,5 +28,5 @@ gulp.task('build', function(){
 });
 
 gulp.task('debug', function(){
-	console.log('nothin here');
-})
+	console.log(minimist(process.argv.slice(2)));
+});

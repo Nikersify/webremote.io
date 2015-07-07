@@ -41,7 +41,7 @@ $ npm install
 $ bower-installer
 ```
 
-#### pleaseworkpleasework
+#### run
 
 ```sh
 $ npm start
@@ -49,5 +49,7 @@ $ npm start
 
 ### building
 
-wip lel
-
+```sh
+$ gulp build
+```
+builds to `./build/webremote.io/<platform>/`

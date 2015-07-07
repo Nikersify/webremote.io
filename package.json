@@ -10,15 +10,19 @@
   "scripts": {
     "start": "nw"
   },
-  "main": "index.html",
+  "main": "src/index.html",
   "window": {
-    "toolbar": true,
-    "height": 790,
-    "width": 1400
+    "position": "center",
+    "toolbar": false,
+    "frame": false,
+    "height": 500,
+    "width": 350,
+    "resizable": false
   },
   "devDependencies": {
     "bower": "^1.4.1",
     "gulp": "^3.9.0",
+    "minimist": "^1.1.1",
     "node-webkit-builder": "^1.0.12",
     "rimraf": "^2.4.1"
   }

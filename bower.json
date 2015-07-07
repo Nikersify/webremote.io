@@ -5,6 +5,6 @@
 		"font-awesome": "latest"
 	},
 	"install": {
-		"path": "ext/"
+		"path": "src/ext"
 	}
 }

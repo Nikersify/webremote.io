@@ -5,12 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="gui/css/remote.css">
 </head>
 <body>
-
+<header>
+	<h3>hello</h3>
+</header>
 <!-- context menu -->
 <script type="text/javascript">
 $(document).ready(function(){
 	var gui = require('nw.gui');
 	var contextMenu = new gui.Menu();
+
+	console.log(gui.Shell);
+	console.log(gui);
 
 	contextMenu.append(new gui.MenuItem({
 		label: 'Open Developer Tools',
@@ -19,7 +24,7 @@ $(document).ready(function(){
 		}
 	}));
 
-	$('#content').on('mousedown', function(e){
+	$('body').on('mousedown', function(e){
 		if(e.button == 2){
 			contextMenu.popup(e.offsetX, e.offsetY);
 		}
