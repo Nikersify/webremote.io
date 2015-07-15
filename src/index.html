@@ -3,35 +3,29 @@
 	<title>webremote.io</title>
 	<script type="text/javascript" src="./ext/jquery/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/remote.css">
+	
+	<!-- variables -->
+	<script type="text/javascript">
+
+	var Remote = require('./lib/remote');
+	var gui = require('nw.gui');
+	var win = gui.Window.get();
+
+	</script>
+
 </head>
 <body>
-<header>
-	<h3>hello</h3>
-</header>
-<script type="text/javascript">
-var Remote = require('./lib/remote');
-</script>
+
+<!-- app start -->
 <script type="text/javascript" src='app.js'></script>
 
 <!-- context menu -->
-<script type="text/javascript" src='contextmenu.js'></script>
-<!-- bootstrapper or something -->
-<script type="text/javascript">
-$(document).ready(function(){
-	
-	var jade = require('jade');
+<script type="text/javascript" src='win/contextmenu.js'></script>
 
-	opts = {
-		debug: false
-	};
+<!-- gui start -->
+<script type="text/javascript" src='win/start.js'></script>
 
-	var fn = jade.compileFile('src/jade/content.jade', opts);
-	
-	vars = {};
-	var compiled = fn(vars);
-	$('#content').html(compiled);
-});
-</script>
 <div id='content'></div>
+
 </body>
 </html>
