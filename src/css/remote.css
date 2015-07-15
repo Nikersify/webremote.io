@@ -147,6 +147,8 @@ footer .extra {
 footer .extra .social a {
 	margin-left: 10px;
 	color: white;
+
+	display: inline-block;
 }
 
 footer .credits {

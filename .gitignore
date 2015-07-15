@@ -8,3 +8,6 @@ ext/
 # node webkit build tools
 bin/
 cache/
+
+# npm
+*.log
