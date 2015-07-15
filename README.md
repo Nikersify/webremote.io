@@ -53,3 +53,6 @@ $ npm start
 $ gulp build
 ```
 builds to `./build/webremote.io/<platform>/`
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Nikersify/webremote.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
