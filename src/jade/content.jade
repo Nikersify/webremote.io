@@ -1,5 +1,49 @@
 .wrapper
-	script(type='text/javascript').
-		console.log('lmao');
-	h1
-		| jestem contentem
+	#controls.container.clear
+		.controls.green
+			.controlsTop
+				.controlsTop-icon
+					i.fa.fa-check#controlsRunningIcon
+					i.fa.fa-times.hidden#controlsRunningIcon
+				.controlsTop-lead
+					| Running!
+				button.controlsTop-button.green
+					| STOP
+			hr
+			.controlsBottom
+				p
+					|	Go to <strong id='ip'>192.168.1.2</strong> <br>
+					|	On your 
+					i.fa.fa-mobile.fa-lg
+					|	mobile device
+	#password.container.clear
+		input#passwordCheck(type='checkbox')
+		.title SECRET CODE
+		input.password#passwordInput(type='password')
+	#settings.container.clear
+		.title SETTINGS
+		.settings
+			.setting
+				input(type='number', style='width: 30px')
+				| hurr durr durr?
+			.setting
+				input(type='number', style='width: 30px')
+				| hurr durr durr :o
+			.setting
+				input(type='number', style='width: 30px')
+				| hurr durr durr D:
+			.setting
+				input(type='number', style='width: 30px')
+				| hurr durr durr!
+			
+
+	footer#credits
+		.extra
+			.social
+				a(target="_blank" href="http://github.com")
+					i.fa.fa-github.fa-2x
+		.credits
+			.credit
+				| Tested by Valom
+			.credit
+				| Put together by Nikersify

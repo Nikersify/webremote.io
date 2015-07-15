@@ -5,6 +5,16 @@
 		"font-awesome": "latest"
 	},
 	"install": {
-		"path": "src/ext"
+		"base": "src/ext",
+		"path": {
+			"js": "{name}/",
+			"css": "{name}/css",
+			"otf": "{name}/fonts",
+			"eot": "{name}/fonts",
+			"svg": "{name}/fonts",
+			"ttf": "{name}/fonts",
+			"woff": "{name}/fonts",
+			"woff2": "{name}/fonts"
+		}
 	}
 }
