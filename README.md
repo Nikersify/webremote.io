@@ -1,5 +1,3 @@
-*just a reference for myself, if you somehow got here leave right now*
-
 # webremote.io
 
 ### dependencies
